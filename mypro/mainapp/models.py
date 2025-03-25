@@ -10,3 +10,6 @@ class Product(models.Model):
     desc = models.TextField(max_length=500)
     img=models.ImageField(upload_to='products/')
     stock = models.PositiveBigIntegerField()
+
+    def __str__(self):
+        return f"product: {self.name}"
